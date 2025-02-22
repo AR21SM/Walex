@@ -179,5 +179,5 @@ graph TD;
 - Use **MongoDB Atlas** for a cloud database.
 
 ### **Frontend**
-- Deploy on **Vercel** or **Netlify**.
+- Deploy on **Vercel** .
 
