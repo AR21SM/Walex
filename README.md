@@ -156,4 +156,4 @@ graph TD;
 
 ---
 
-                                            **Made with ❤️ by AR21SM**
+                                            Made with ❤️ by AR21SM
