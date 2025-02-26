@@ -1,52 +1,49 @@
-# PayTM-Like Web Application
+# Walex Web Application
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [API Endpoints](#api-endpoints)
-7. [Project Structure](#project-structure)
-8. [Security Measures](#security-measures)
-9. [Flowchart](#flowchart)
-10. [Testing](#testing)
-11. [Deployment](#deployment)
-
+1. [Introduction](#introduction)  
+2. [Features](#features)  
+3. [Technologies Used](#technologies-used)  
+4. [Installation](#installation)  
+5. [Usage](#usage)  
+6. [API Endpoints](#api-endpoints)  
+7. [Project Structure](#project-structure)  
+8. [Security Measures](#security-measures)  
+9. [Screenshots](#screenshots)  
+10. [Flowchart](#flowchart)  
 
 ## Introduction
-This project is a **PayTM-like web application** developed using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It facilitates **secure digital transactions**, **real-time balance tracking**, and **seamless user authentication** with a modern and intuitive user interface. The application ensures **data integrity and security** using robust measures such as **JWT authentication, Mongoose Sessions, and Zod validation**.
+This project is **Walex**, a digital wallet web application developed using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It facilitates **secure digital transactions**, **real-time balance tracking**, and **seamless user authentication** with a modern and intuitive user interface. 
+
+The application ensures **data integrity and security** using robust measures such as **JWT authentication, Mongoose Sessions, and Zod validation**.
+
+![Signin Page](./screenshot/signin.png)
 
 ## Features
-- **User Authentication**: Signup & Signin with secure JWT-based authentication.
-- **Session-based Transactions**: Transactions are handled using Mongoose Sessions to maintain data integrity.
-- **Real-time Updates**: Dynamic UI updates for transactions and balances.
-- **State Management**: Efficient frontend state management using React Context API/Redux.
-- **RESTful API**: Clean and well-structured backend API architecture.
-- **Role-Based Access Control (RBAC)**: Different user roles such as admin and customer.
-- **Transaction History**: Users can view their past transactions with filters.
+- **User Authentication**: Secure Signup & Signin with JWT authentication.
+- **Session-based Transactions**: Transactions are handled using Mongoose Sessions.
+- **Real-time Updates**: UI updates dynamically for transactions and balances.
+- **State Management**: React Context API/Redux.
+- **Role-Based Access Control (RBAC)**: Admin & customer roles.
 - **Secure Password Handling**: Password hashing with bcrypt.
-- **Responsive UI**: Built with Tailwind CSS for a seamless experience across devices.
-- **Error Handling & Logging**: Integrated middleware for structured error responses and logging.
-- **Multi-Factor Authentication (MFA) (Optional)**: For additional security.
+- **Responsive UI**: Tailwind CSS for smooth adaptability across devices.
+- **Error Handling & Logging**: Middleware for structured error responses.
+
+![Dashboard](./screenshot/dashboard.png)
 
 ## Technologies Used
 ### **Frontend**
-- **React.js (Vite for fast builds)**
-- **Tailwind CSS** for styling
-- **Axios** for API requests
-- **React Router** for navigation
-- **Redux Toolkit (optional)** for state management
+- React.js (Vite for fast builds)
+- Tailwind CSS for styling
+- Axios for API requests
+- React Router for navigation
 
 ### **Backend**
-- **Node.js**
-- **Express.js**
-- **MongoDB & Mongoose ORM**
-- **Zod** for request validation
-- **JWT** for authentication
-- **Mongoose Transactions** for atomic transactions
-- **Morgan** for logging
-- **Dotenv** for environment variables
+- Node.js
+- Express.js
+- MongoDB & Mongoose ORM
+- Zod for request validation
+- JWT for authentication
 
 ## Installation
 ### **Prerequisites**
@@ -55,8 +52,7 @@ This project is a **PayTM-like web application** developed using the **MERN stac
 
 ### **Clone the Repository**
 ```sh
-git clone https://github.com/AR21SM/PayTM.git
-cd PayTM-Project
+git clone https://github.com/AR21SM/Walex.git
 ```
 
 ### **Backend Setup**
@@ -85,6 +81,8 @@ npm run dev
 1. Open `http://localhost:3000` for the frontend.
 2. Use **Postman** or similar tools to test the backend API at `http://localhost:5000`.
 
+![Send Money Page](./screenshot/sendmoney.png)
+
 ## API Endpoints
 ### **User Authentication**
 - **Register**
@@ -98,6 +96,7 @@ npm run dev
     "password": "password123"
   }
   ```
+
 - **Login**
   - `POST /api/v1/signin`
   - Request Body:
@@ -108,24 +107,9 @@ npm run dev
   }
   ```
 
-### **Transactions**
-- **Create Transaction**
-  - `POST /api/v1/transactions`
-  - Headers: `Authorization: Bearer <token>`
-  - Request Body:
-  ```json
-  {
-    "amount": 100,
-    "type": "credit"
-  }
-  ```
-- **Get Balance**
-  - `GET /api/v1/user/balance`
-  - Headers: `Authorization: Bearer <token>`
-
 ## Project Structure
 ```
-paytm-project/
+walex-project/
 │── backend/
 │   │── routes/
 │   │── controllers/
@@ -154,6 +138,8 @@ paytm-project/
 - **Input Validation** with Zod to prevent injection attacks.
 - **CORS Handling** for secure cross-origin requests.
 
+![Users Page](./screenshot/users.png)
+
 ## Flowchart
 ```mermaid
 graph TD;
@@ -166,18 +152,3 @@ graph TD;
     E -->|Failure| G[Error Message]
     F --> D
     G --> D
-```
-
-## Testing
-- **Unit Tests** with Jest
-- **Integration Tests** using Supertest
-- **E2E Testing** with Cypress
-
-## Deployment
-### **Backend**
-- Deploy using **Render**, **Heroku**, or **AWS EC2**.
-- Use **MongoDB Atlas** for a cloud database.
-
-### **Frontend**
-- Deploy on **Vercel** .
-
